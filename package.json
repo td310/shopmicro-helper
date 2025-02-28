@@ -1,5 +1,6 @@
+
 {
-  "version": "0.3.4",
+  "version": "0.0.1",
   "license": "MIT",
   "types": "./src/index.d.ts",
   "description": "Helpers library for Jobber app",
@@ -36,7 +37,6 @@
   },
   "dependencies": {
     "@elastic/elasticsearch": "^8.13.0",
-    "@td310/shopmicro-helper": "^0.0.1",
     "cloudinary": "^2.1.0",
     "express": "^4.19.2",
     "http-status-codes": "^2.3.0",
@@ -51,7 +51,6 @@
     "@babel/preset-env": "^7.24.3",
     "@babel/preset-typescript": "^7.24.1",
     "@types/express": "^4.17.21",
-    "@types/jsonwebtoken": "^9.0.6",
-    "cross-env": "^7.0.3"
+    "@types/jsonwebtoken": "^9.0.6"
   }
 }
