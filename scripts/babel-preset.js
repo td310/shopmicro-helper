@@ -6,14 +6,14 @@ module.exports = () => ({
   presets: [
     ['@babel/preset-typescript'],
     [
-      '@babel/preset-env',
+      '@babel/env',
       {
         bugfixes: true,
         loose: true,
         modules: isCommonJS ? 'commonjs' : false,
         targets: {
           esmodules: isESM ? true : undefined,
-          node: '22'
+          chrome: 70,
         },
       },
     ],
