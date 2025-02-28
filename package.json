@@ -2,9 +2,9 @@
   "version": "0.0.1",
   "license": "MIT",
   "main": "index.js",
-  "description": "Helpers library for Jobber app",
+  "description": "Helpers library for Shopmicro app",
   "engines": {
-    "node": ">=18"
+    "node": ">=22"
   },
   "scripts": {
     "build": "npm run build:cjs && npm run build:esm && tsc --outDir build/src && node scripts/build-package.js",
@@ -18,11 +18,11 @@
     "trailingComma": "es5"
   },
   "keywords": [],
-  "name": "@td310/jobber-shared",
+  "name": "@td310/shopmicro-helper",
   "author": "Tai Duc",
   "repository": {
     "type": "git",
-    "url": ""
+    "url": "git+https://github.com/td310/shopmicro-helper.git"
   },
   "publishConfig": {
     "registry": "https://npm.pkg.github.com"
@@ -37,5 +37,19 @@
       "require": "./cjs/icons/index.js"
     }
   },
-  "types": "./src/index.d.ts"
+  "types": "./src/index.d.ts",
+  "dependencies": {
+    "@elastic/elasticsearch": "^8.17.1",
+    "@types/express": "^5.0.0",
+    "cloudinary": "^2.5.1",
+    "express": "^4.21.2",
+    "http-status-codes": "^2.3.0",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^8.11.0",
+    "winston": "^3.17.0",
+    "winston-elasticsearch": "^0.19.0"
+  },
+  "devDependencies": {
+    "@types/jsonwebtoken": "^9.0.9"
+  }
 }
