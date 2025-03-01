@@ -1,7 +1,7 @@
 {
-  "version": "0.0.2-beta.8",
+  "version": "0.0.2-beta.9",
   "license": "MIT",
-  "types": "./src/index.d.ts",
+  "types": "./build/index.d.ts",
   "description": "Helpers library for Jobber app",
   "scripts": {
     "build": "npm run build:cjs && npm run build:esm && tsc --outDir build/src && node scripts/build-package.js",
