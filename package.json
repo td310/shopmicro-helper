@@ -1,7 +1,9 @@
 {
-  "version": "0.0.2-beta.2",
+  "version": "0.0.2-beta.3",
   "license": "MIT",
-  "types": "./src/index.d.ts",
+  "main": "./build/cjs/index.js",
+  "module": "./build/esm/index.js", 
+  "types": "./build/src/index.d.ts",
   "description": "Helpers library for Jobber app",
   "scripts": {
     "build": "npm run build:cjs && npm run build:esm && tsc --outDir build/src && node scripts/build-package.js",
@@ -30,8 +32,9 @@
   ],
   "exports": {
     ".": {
-      "import": "./build/cjs/index.js",
-      "require": "./build/cjs/index.js"
+      "require": "./build/cjs/index.js",
+      "import": "./build/esm/index.js",
+      "types": "./build/src/index.d.ts"
     }
   },
   "dependencies": {

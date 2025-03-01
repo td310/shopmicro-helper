@@ -1,3 +1,22 @@
-const { copyFileSync } = require('fs');
+const fs = require('fs');
+const path = require('path');
 
-copyFileSync('package.json', 'build/package.json');
+const package = require('../package.json');
+const buildPackage = {
+  ...package,
+  main: './cjs/index.js',
+  module: './esm/index.js',
+  types: './src/index.d.ts',
+  exports: {
+    '.': {
+      require: './cjs/index.js',
+      import: './esm/index.js',
+      types: './src/index.d.ts'
+    }
+  }
+};
+
+fs.writeFileSync(
+  path.join(__dirname, '../build/package.json'),
+  JSON.stringify(buildPackage, null, 2)
+);
