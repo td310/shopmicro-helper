@@ -1,7 +1,7 @@
 {
-  "version": "0.0.3",
+  "version": "0.0.3.beta.1",
   "license": "MIT",
-  "types": "./build/index.d.ts",
+  "types": "./src/index.d.ts",
   "description": "Helpers library for Jobber app",
   "scripts": {
     "build": "npm run build:cjs && npm run build:esm && tsc --outDir build/src && node scripts/build-package.js",
@@ -25,13 +25,13 @@
     "registry": "https://npm.pkg.github.com"
   },
   "files": [
-    "build"
+    "build/cjs",
+    "build/esm",
+    "src"
   ],
   "exports": {
-    ".": {
-      "import": "./build/esm/index.js",
-      "require": "./build/cjs/index.js"
-    }
+    "import": "./build/esm/index.js",
+    "require": "./build/cjs/index.js"
   },
   "dependencies": {
     "@elastic/elasticsearch": "^8.13.0",

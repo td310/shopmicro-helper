@@ -1,5 +1,5 @@
 {
-  "version": "0.0.2-beta.7",
+  "version": "0.0.3.beta.1",
   "license": "MIT",
   "types": "./src/index.d.ts",
   "description": "Helpers library for Jobber app",
@@ -26,12 +26,12 @@
   },
   "files": [
     "build",
-    "src/index.d.ts"
+    "src"
   ],
   "exports": {
     ".": {
-      "import": "./build/esm/index.js",
-      "require": "./build/cjs/index.js"
+      "import": "./src/index.js",
+      "require": "./src/index.js"
     }
   },
   "dependencies": {
