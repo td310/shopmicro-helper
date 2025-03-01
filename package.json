@@ -1,5 +1,5 @@
 {
-  "version": "0.0.2-beta.1",
+  "version": "0.0.2-beta.2",
   "license": "MIT",
   "types": "./src/index.d.ts",
   "description": "Helpers library for Jobber app",
@@ -25,8 +25,8 @@
     "registry": "https://npm.pkg.github.com"
   },
   "files": [
-    "build",
-    "src"
+    "build/**/*",
+    "src/index.d.ts"
   ],
   "exports": {
     ".": {
