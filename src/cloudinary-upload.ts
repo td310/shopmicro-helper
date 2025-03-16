@@ -1,5 +1,12 @@
 import cloudinary, {UploadApiErrorResponse, UploadApiResponse} from 'cloudinary';
+import { config as dotenvConfig } from 'dotenv';
+dotenvConfig(); 
 
+cloudinary.v2.config({
+  cloud_name: process.env.CLOUD_NAME,
+  api_key: process.env.CLOUD_API_KEY,
+  api_secret: process.env.CLOUD_API_SECRET
+});
 export function uploads(
     file: string, 
     public_id?: string,
